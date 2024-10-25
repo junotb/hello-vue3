@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import EmailForm from './path/to/MailSlot.vue'
+import MailSlot from '.@/MailSlot.vue'
 
 export default {
   components: {
