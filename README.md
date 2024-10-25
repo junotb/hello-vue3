@@ -1,36 +1,40 @@
-# HelloVue
+# Vue.js メールフォームコンポーネント
 
-This template should help get you started developing with Vue 3 in Vite.
+このコンポーネントは、Vue.jsを使用して作成されたメールフォームです。ユーザーが報告者、入出タイプ、およびアポイント情報を入力でき、送信時にEmailJSを通じてメールを送信します。
 
-## Recommended IDE Setup
+## 機能
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- 報告者の選択（ドロップダウン）
+- 入出タイプの選択（ドロップダウン）
+- アポイント情報の入力（テキスト入力）
+- フォーム送信時にEmailJSを通じてメール送信
 
-## Customize configuration
+## セットアップ
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+このコンポーネントを使用するには、以下の設定が必要です：
 
-## Project Setup
+1. EmailJSアカウントの作成とサービスの設定
+2. `@/config/AppSettings.js` ファイルにEmailJS関連の設定を追加：
+   - `emailjsServiceId`
+   - `emailjsTemplateId`
+   - `emailjsUserId`
 
-```sh
-npm install
-```
+## 使用方法
 
-### Compile and Hot-Reload for Development
+1. コンポーネントをVue.jsプロジェクトにインポートします。
+2. 必要な場所にコンポーネントを配置します。
 
-```sh
-npm run dev
-```
+```vue
+<template>
+  <EmailForm />
+</template>
 
-### Compile and Minify for Production
+<script>
+import EmailForm from './path/to/EmailForm.vue'
 
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
-# hello-vue3
+export default {
+  components: {
+    EmailForm
+  }
+}
+</script>
