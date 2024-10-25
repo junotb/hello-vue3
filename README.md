@@ -26,15 +26,15 @@
 
 ```vue
 <template>
-  <EmailForm />
+  <MailSlot />
 </template>
 
 <script>
-import EmailForm from './path/to/EmailForm.vue'
+import EmailForm from './path/to/MailSlot.vue'
 
 export default {
   components: {
-    EmailForm
+    MailSlot
   }
 }
 </script>
